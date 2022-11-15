@@ -1,4 +1,4 @@
-module github.com/gqcn/tools/rsync
+module github.com/gqcn/tools/autosync
 
 go 1.19
 
