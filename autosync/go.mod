@@ -2,7 +2,7 @@ module github.com/gqcn/tools/autosync
 
 go 1.19
 
-require github.com/gogf/gf/v2 v2.2.2
+require github.com/gogf/gf/v2 v2.2.4
 
 require (
 	github.com/BurntSushi/toml v1.1.0 // indirect
