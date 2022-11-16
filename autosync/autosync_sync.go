@@ -13,17 +13,15 @@ import (
 
 type SyncInput struct {
 	g.Meta     `dc:"通过本地fswatch监听本地目录变化，并使用rsync自动同步到远端服务器目录"`
-	LocalDir   string  `v:"required" dc:"本地目录"`
-	RemoteDir  string  `v:"required" dc:"远端服务器目录"`
-	RemoteHost string  `v:"required" dc:"远端服务器地址"`
-	RemotePort uint    `v:"required" dc:"远端服务器端口"`
-	RemoteUser string  `v:"required" dc:"远端服务器用户"`
-	writer     *Writer `dc:"内部属性，内部使用"`
+	LocalDir   string `v:"required" dc:"本地目录"`
+	RemoteDir  string `v:"required" dc:"远端服务器目录"`
+	RemoteHost string `v:"required" dc:"远端服务器地址"`
+	RemotePort uint   `v:"required" dc:"远端服务器端口"`
+	RemoteUser string `v:"required" dc:"远端服务器用户"`
 }
 type SyncOutput struct{}
 
 func (c *AutoSync) Sync(ctx context.Context, in SyncInput) (out *SyncOutput, err error) {
-	in.writer = NewWriter()
 	gtimer.AddSingleton(ctx, time.Millisecond*500, func(ctx context.Context) {
 		c.doRsync(ctx, in)
 	})

@@ -16,7 +16,9 @@ func main() {
 		err error
 		ctx = gctx.GetInitCtx()
 	)
-	cmd, err := gcmd.NewFromObject(&AutoSync{})
+	cmd, err := gcmd.NewFromObject(&AutoSync{
+		writer: NewWriter(),
+	})
 	if err != nil {
 		g.Log().Fatalf(ctx, `%+v`, err)
 	}
