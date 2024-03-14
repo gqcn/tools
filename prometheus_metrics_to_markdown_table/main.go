@@ -34,7 +34,7 @@ func main() {
 	}
 	mdContent += mdTableHeader
 	for _, match := range matches {
-		mdContent += fmt.Sprintf("| %s | %s | %s |\n", match[1], match[3], match[2])
+		mdContent += fmt.Sprintf("| %s | %s | %s |\n", match[2], match[3], match[1])
 	}
 	fmt.Println(mdContent)
 }
