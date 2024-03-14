@@ -1,0 +1,34 @@
+# HELP etcd_cluster_version Which version is running. 1 for 'cluster_version' label with current cluster version
+# TYPE etcd_cluster_version gauge
+etcd_cluster_version{cluster_version="3.0"} 0
+etcd_cluster_version{cluster_version="3.3"} 1
+# HELP etcd_debugging_auth_revision The current revision of auth store.
+# TYPE etcd_debugging_auth_revision gauge
+etcd_debugging_auth_revision 1
+# HELP etcd_debugging_mvcc_compact_revision The revision of the last compaction in store.
+# TYPE etcd_debugging_mvcc_compact_revision gauge
+etcd_debugging_mvcc_compact_revision 47102
+# HELP etcd_debugging_mvcc_current_revision The current revision of store.
+# TYPE etcd_debugging_mvcc_current_revision gauge
+etcd_debugging_mvcc_current_revision 47103
+# HELP etcd_debugging_mvcc_db_compaction_keys_total Total number of db keys compacted.
+# TYPE etcd_debugging_mvcc_db_compaction_keys_total counter
+etcd_debugging_mvcc_db_compaction_keys_total 46079
+# HELP etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds Bucketed histogram of db compaction pause duration.
+# TYPE etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds histogram
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="1"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="2"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="4"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="8"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="16"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="32"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="64"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="128"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="256"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="512"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="1024"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="2048"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="4096"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_bucket{le="+Inf"} 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_sum 0
+etcd_debugging_mvcc_db_compaction_pause_duration_milliseconds_count 0
