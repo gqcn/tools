@@ -3,10 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
+
 	"github.com/gogf/gf/v2/os/gfile"
 	"github.com/gogf/gf/v2/os/glog"
 	"github.com/gogf/gf/v2/text/gregex"
-	"os"
 )
 
 const (
